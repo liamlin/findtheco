@@ -1,0 +1,62 @@
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  opacity: .2;
+}
+
+/****************************
+           Copy
+****************************/
+
+.landing-content {
+    padding: 2rem;
+}
+
+.main-copy {
+    font-family: avenir, helvetica, sans-serif;
+    margin: 7.5rem 0 3rem;
+    color: rgb(52, 44, 144)
+}
+
+.support-copy {
+    font-weight: lighter;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+}
+
+/****************************
+           Form
+****************************/
+
+.email-form {
+    border-radius: 5px;
+}
+
+.email-form-wrapper {
+    padding-right: 5px;
+    max-width: 300px;
+}
+
+.submit-btn-wrapper {
+    padding: 0;
+}
+
+.submit-btn {
+    background-color: rgb(72, 64, 211);
+    color: white;
+    font-weight: lighter;
+}

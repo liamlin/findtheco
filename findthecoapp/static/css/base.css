@@ -1,0 +1,14 @@
+/****************************
+        Navigation
+****************************/
+
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+}

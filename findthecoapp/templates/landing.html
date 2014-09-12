@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{#{% block title %}#}
+{#Find The Job You Love | FindTheCo#}
+{#{% endblock %}#}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="bg">
+    <img src="{% static 'img/startup_office_photo.jpg' %}" height="800" width="auto" alt="startup office photo">
+</div>
+
+<div class="container-fluid landing-content">
+    <div class="row row-main-copy">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 main-copy">
+            <h1 class="main-copy-text">Find The Job That Loves You Back</h1>
+        </div>
+    </div>
+    <div class="row row-support-copy">
+        <div class="col-xs-12 col-sm-5 col-md-5 support-copy">
+            <p>Don't spend hours at a company whose values you don't align with. With a quick survey, you'll be able to have a list of companies that you will be guaranteed to be happy with.</p>
+            <br>
+            <p>Come take a new step with us.</p>
+        </div>
+    </div>
+    <div class="row e-mail-form-total">
+        <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4 email-form-wrapper">
+            <form role="form email-form-group">
+                <div class="form-group">
+                    <input type="text" class="form-control email-form" placeholder="E-mail">
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-4 col-sm-1 col-md-1 col-lg-1 submit-btn-wrapper">
+            <button type="submit" class="btn btn-default submit-btn">Find A Job</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
