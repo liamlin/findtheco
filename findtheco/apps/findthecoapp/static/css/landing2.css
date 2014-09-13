@@ -82,6 +82,7 @@
     max-width: 400px;
     text-align: center;
     padding: 15px 15px 15px 15px;
+    min-height: 210px;
 }
 
 .email-total-wrapper > p {
@@ -116,5 +117,17 @@
     -webkit-transition: .5s ease;
     color: white;
     background-color: rgb(73, 67, 255);
+}
+
+.thanks {
+    color: #9d9d9d;
+    font-weight: lighter;
+    font-family: helvetica, sans-serif;
+    line-height: 2rem;
+    display: none;
+}
+
+.thanks-title {
+    font-size: 2rem;
 }
 

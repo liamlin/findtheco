@@ -12,12 +12,16 @@ $(document).ready(function() {
         var emailInput = $('.email-form');
         var email = emailInput.val();
         var button = $('.submit-btn');
+        var thanks = $('.thanks');
         if (validateEmail(email)) {
-
+            $('#email-form').css('display', 'none');
+            thanks.addClass('animated flipInX');
+            thanks.css('display', 'inline-block');
         } else {
             emailInput.addClass('animated shake');
             button.addClass('animated shake');
             emailInput.css('background-color', '#e2373f');
+            emailInput.css('border-color', '#e2373f');
         }
     }
 
