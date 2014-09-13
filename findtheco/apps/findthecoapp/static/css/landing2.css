@@ -56,7 +56,7 @@
     padding-left: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (device-aspect-ratio: 40/71) {
     .main-copy-text {
         font-size: 3rem;
         text-align: center;
