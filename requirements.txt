@@ -1,6 +1,7 @@
 Django==1.6.5
 South==1.0
 boto==2.32.1
+coverage==3.7.1
 dj-database-url==0.3.0
 django-herokuapp==0.9.18
 django-require==1.0.6
