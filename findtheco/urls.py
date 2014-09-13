@@ -1,15 +1,19 @@
-from django.conf import settings
-from django.conf.urls import patterns, include, url
-from django.conf.urls.static import static
+from django.conf.urls import patterns, url, include
 from django.contrib import admin
+from django.views import generic
 
-urlpatterns = patterns('',
-    # Examples:
-    url(r'^$', 'findthecoapp.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+admin.autodiscover()
+
+
+urlpatterns = patterns("",
+
+    # Admin URLs.
+    url(r"^admin/", include(admin.site.urls)),
+
+    url(r'^$', 'findtheco.apps.findthecoapp.views.home', name='home'),
+
+    # There's no favicon here!
+    url(r"^favicon.ico$", generic.RedirectView.as_view()),
+    
 )
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
