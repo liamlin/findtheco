@@ -100,7 +100,7 @@
     font-size: 1.75rem;
 }
 
-.submit-btn {
+.submit-btn, .submit-btn:focus {
     background-color: rgb(72, 64, 211);
     color: white;
     font-weight: lighter;
