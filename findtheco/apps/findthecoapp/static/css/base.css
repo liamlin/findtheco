@@ -1,10 +1,25 @@
 /****************************
+        Variables
+****************************/
+@font-face {
+    font-family: 'Intro Inline';
+    src: url("fonts/Intro%20Inline.otf");
+}
+
+/****************************
         Navigation
 ****************************/
 
 .navbar-default {
     background-color: rgba(0, 0, 0, 0);
     border-bottom: none;
+    font-family: "Intro Inline";
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 2rem;
+    padding-left: 20px;
 }
 
 .footer {

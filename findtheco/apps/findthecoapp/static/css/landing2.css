@@ -30,6 +30,7 @@
     font-family: Avenir, helvetica, sans-serif;
     margin: 4rem 0 2rem;
     color: #fff;
+
 }
 
 .main-copy-text {
@@ -56,7 +57,7 @@
     padding-left: 0;
 }
 
-@media screen and (device-aspect-ratio: 40/71) {
+@media screen and (max-width: 480px), (device-aspect-ratio: 40/71) {
     .main-copy-text {
         font-size: 3rem;
         text-align: center;
