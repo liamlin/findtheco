@@ -9,6 +9,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/landing2.css' %}">
 {% endblock %}
 
+{% block js %}
+<script src="{% static 'js/landing2.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 
 <div id="bg">
@@ -18,11 +22,11 @@
 <div class="container landing-content">
     <div class="row row-main-copy">
         <div class="col-xs-12 col-sm-9 main-copy">
-            <h1 class="main-copy-text">Find the job that loves you back</h1>
+            <h1 class="main-copy-text animated bounceInDown">Find the job that loves you back</h1>
         </div>
     </div>
     <div class="row row-support-copy">
-        <div class="col-xs-12 col-sm-8 col-md-7 support-copy">
+        <div class="col-xs-12 col-sm-8 col-md-7 support-copy animated fadeIn">
 {#            <p>Don't spend hours at a company whose values you don't align with. With a quick survey, you'll be able to have a list of companies that you will be guaranteed to be happy with.</p>#}
             <p>FindTheCo introduces you jobs with promising companies whose values you believe in. </p>
             <br>
@@ -40,7 +44,7 @@
 {#            <p>Come take a new step with us.</p>#}
         </div>
     </div>
-    <div class="email-total-wrapper">
+    <div class="email-total-wrapper animated fadeIn">
         <p>We will be launching soon!<br> Sign up to to be invited for early access!</p>
         <div class="email-complete-box">
             <div class="row e-mail-form-total">
@@ -48,13 +52,9 @@
                     <form role="form" id="email-form">
                         <div class="form-group">
                             <input type="text" class="form-control email-form" placeholder="E-mail">
+                            <input type="submit" form="email-form" class="btn btn-default submit-btn" value="Invite Me">
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="row e-mail-form-btn">
-                <div class="col-xs-12 submit-btn-wrapper">
-                    <button type="submit" form="email-form" class="btn btn-default submit-btn">Invite Me</button>
                 </div>
             </div>
         </div>
