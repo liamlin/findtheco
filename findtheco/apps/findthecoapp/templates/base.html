@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+    <!-- JSValidator -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css"/>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.1/js/bootstrapValidator.min.js"></script>
+
     <!-- Submitted CSS File -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     {% block css %}{% endblock %}
@@ -27,13 +31,13 @@
                 Navigation Bar
      ------------------------------------>
     <div class="navbar navbar-default">
-        <div class="container-fluid container-nav">
+        <div class="container container-nav">
             <div class="navbar-header header-nav">
                 <a class="navbar-brand" href="#">FindTheCo</a>
             </div>
-            <div class="navbar-right">
-                <a class="navbar-right navbar-link navbar-text" href="#">Sign Up</a>
-            </div>
+{#            <div class="navbar-right">#}
+{#                <a class="navbar-right navbar-link navbar-text" href="#">Sign Up</a>#}
+{#            </div>#}
         </div>
     </div>
 
@@ -49,15 +53,15 @@
                 Footer
      ------------------------------------>
     <div class="row footer">
-    <hr>
-        <div class="col-lg-12">
-            <ul class="nav nav-pills nav-justified">
-                <li><a href="/">© 2014 FindTheCo.</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-        </div>
-    </div>
+{#    <hr>#}
+{#        <div class="col-lg-12">#}
+{#            <ul class="nav nav-pills nav-justified">#}
+{#                <li><a href="/">© 2014 FindTheCo.</a></li>#}
+{#                <li><a href="#">Terms of Service</a></li>#}
+{#                <li><a href="#">Privacy</a></li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
 
 </body>
 </html>
