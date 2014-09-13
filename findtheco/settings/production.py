@@ -31,7 +31,7 @@ HEROKU_BUILDPACK_URL = "https://github.com/heroku/heroku-buildpack-python.git"
 
 SITE_NAME = "FindTheCo"
 
-SITE_DOMAIN = "findtheco.herokuapp.com"
+SITE_DOMAIN = "www.findthe.co"
 
 PREPEND_WWW = False
 
