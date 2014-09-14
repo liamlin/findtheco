@@ -15,7 +15,6 @@
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-  opacity: .8;
 }
 
 /****************************
@@ -57,6 +56,16 @@
     padding-left: 0;
 }
 
+@media screen and (max-height: 675px) {
+    .main-copy {
+        margin-top: 0;
+    }
+
+    .main-copy-text {
+        font-size: 5rem;
+    }
+}
+
 @media screen and (max-width: 480px), (device-aspect-ratio: 40/71) {
     .main-copy-text {
         font-size: 3rem;
@@ -70,16 +79,6 @@
 
     .list {
         display: none;
-    }
-}
-
-@media screen and (max-height: 675px) {
-    .main-copy {
-        margin-top: 0;
-    }
-
-    .main-copy-text {
-        font-size: 5rem;
     }
 }
 
