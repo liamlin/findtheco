@@ -175,6 +175,7 @@ MIDDLEWARE_CLASSES = (
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 )
 
+
 ROOT_URLCONF = "findtheco.urls"
 
 WSGI_APPLICATION = "findtheco.wsgi.application"
