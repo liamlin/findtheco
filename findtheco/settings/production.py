@@ -254,3 +254,7 @@ LOGGING = {
         }
     }
 }
+
+# SendGrid API credentials
+SENDGRID_APIUSER = os.environ.get("SENDGRID_APIUSER")
+SENDGRID_APIKEY = os.environ.get("SENDGRID_APIKEY")

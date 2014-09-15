@@ -3,8 +3,6 @@
  */
 $(document).ready(function() {
 
-
-
     function validateEmail(email) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
@@ -27,29 +25,50 @@ $(document).ready(function() {
         }
     }
 
-    // Post request we need to make to add an e-mail to our list:
-    // curl -X POST https://sendgrid.com/api/newsletter/lists/email/add.json -d api_user=findtheco -d api_key=XXXXXXXX -d list=FindTheCoPre-launchList -d data={"email":"willie@gmail.com"}
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+    function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
 
     $('.submit-btn').on('click', function(){
         validate();
-        var url = "https://sendgrid.com/api/newsletter/lists/email/add.json";
-        var api_user = "findtheco";
-        var api_key = "willie1026";
-        var list = "FindTheCoPre-launchList";
-        var data = {"email":$('.email-form').val()};
-        var emailInfo = {"api_user": api_user, "api_key": api_key, "list":list, "data": data};
-        var emailInfoJSON = JSON.stringify(emailInfo);
+        var url = "/subscribe/";
+        var emailInfo = {"email":$('.email-form').val()};
         $.ajax ({
             url: url,
             type: "POST",
-            crossDomain: true,
-            dataType: "json",
-            data: emailInfoJSON,
+            data: emailInfo,
             success: function(response) {
                 console.log(response);
             },
             error: function(response) {
                 console.log("This is not good");
+                console.log(response);
             }
         });
         return false;
