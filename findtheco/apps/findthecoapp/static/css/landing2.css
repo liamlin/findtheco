@@ -33,7 +33,7 @@
 }
 
 .main-copy-text {
-    font-size: 5.25rem;
+    font-size: 5rem;
     font-weight: lighter;
     text-shadow: 1px 1px 2px #000;
 }
@@ -59,10 +59,6 @@
 @media screen and (max-height: 675px) {
     .main-copy {
         margin-top: 0;
-    }
-
-    .main-copy-text {
-        font-size: 5rem;
     }
 }
 
