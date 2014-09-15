@@ -33,7 +33,7 @@
 }
 
 .main-copy-text {
-    font-size: 5.25rem;
+    font-size: 5rem;
     font-weight: lighter;
     text-shadow: 1px 1px 2px #000;
 }
@@ -50,9 +50,9 @@
 
 .list {
     list-style: none;
-    line-height: 2em;
+    line-height: 1.75em;
     font-weight: bolder;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     padding-left: 0;
 }
 
@@ -60,20 +60,16 @@
     .main-copy {
         margin-top: 0;
     }
-
-    .main-copy-text {
-        font-size: 5rem;
-    }
 }
 
 @media screen and (max-width: 480px), (device-aspect-ratio: 40/71) {
     .main-copy-text {
-        font-size: 3rem;
+        font-size: 3.75rem;
         text-align: center;
     }
 
     .support-copy {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         text-align: center;
     }
 
