@@ -3,9 +3,10 @@ import requests, json
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render
 from django.conf import settings
+from django.views.decorators.csrf import ensure_csrf_cookie
 
-# Create your views here.
 
+@ensure_csrf_cookie
 def home(request):
     return render(request, 'landing2.html')
 
